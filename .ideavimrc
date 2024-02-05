@@ -1,0 +1,57 @@
+Plug 'tpope/vim-surround'
+Plug 'machakann/vim-highlightedyank'
+
+let mapleader = " "
+
+set number
+set history=500
+set timeoutlen=5000
+set showmode
+set so=5
+set incsearch
+set nu
+set ignorecase
+set smartcase
+set multiple-cursors
+set clipboard+=unnamed
+set hlsearch
+set scrolloff=3
+set sidescrolloff=4
+
+""" Idea specific settings ------------------
+set ideajoin
+set ideastatusicon=gray
+
+
+" edit ideavim config
+nnoremap <leader>vv :e ~/.ideavimrc<CR>
+nnoremap <leader>vr :source ~/.ideavimrc<CR>
+
+nnoremap <leader>e :action ActivateProjectToolWindow<CR>
+nnoremap <leader>s :action SaveDocument<CR>
+nnoremap <leader>/ :action CommentByLineComment<CR>
+vnoremap <leader>/ :action CommentByBlockComment<CR>
+
+nmap <s-l> <Action>(NextTab)
+nmap <s-h> <Action>(PreviousTab)
+nnoremap s :action AceWordStartAction<CR>
+nnoremap <leader>lD :action GotoDeclaration<CR>
+nnoremap <leader>la :action ShowIntentionActions<CR>
+nnoremap <leader>lr :action RenameElement<CR>
+nnoremap <leader>c :action CloseContent<CR>
+nnoremap <leader>ff :action GotoFile<CR>
+nnoremap <leader>fg :action GotoSymbol<CR>
+nnoremap <leader>fe :action RecentFiles<CR>
+nnoremap <leader>a :action GotoAction<CR>
+nnoremap <leader>g :action Git.Menu<CR>
+nnoremap <S-k> :action ShowErrorDescription<CR>
+nnoremap <leader>k :action QuickJavaDoc<CR>
+
+nnoremap [e :action GotoNextError<CR>
+nnoremap ]e :action GotoPreviousError<CR>
+nmap [c :action VcsShowPrevChangeMarker<CR>
+nmap ]c :action VcsShowNextChangeMarker<CR>
+
+imap jk <ESC>
+imap kj <ESC>
+nnoremap <C-A> gg<S-v>G
