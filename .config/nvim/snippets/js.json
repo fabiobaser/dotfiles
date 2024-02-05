@@ -1,0 +1,6 @@
+{
+  "import": {
+    "prefix": "log",
+    "body": ["console.log($1)"]
+  }
+}
