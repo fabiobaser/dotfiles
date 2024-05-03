@@ -52,6 +52,4 @@ nnoremap ]e :action GotoPreviousError<CR>
 nmap [c :action VcsShowPrevChangeMarker<CR>
 nmap ]c :action VcsShowNextChangeMarker<CR>
 
-imap jk <ESC>
-imap kj <ESC>
 nnoremap <C-A> gg<S-v>G

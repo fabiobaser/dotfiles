@@ -1,5 +1,5 @@
 # starts tmux if not already running (checked via $TMUX env var)
-if [ "$TMUX" = "" ]; then /opt/homebrew/bin//tmux; fi
+# if [ "$TMUX" = "" ]; then /opt/homebrew/bin//tmux; fi
 
 #Enable Command-Correction
 setopt correct
@@ -23,6 +23,7 @@ export PYTHONWARNINGS="ignore"
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#6c7086'
 set -g @tmux_window_dir_programs "['nvim', 'vim', 'vi', 'git', 'pnpm']"
 
+SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 
 if [[ -n ${ZSH_VERSION-} ]]; then
   autoload -U +X compinit && if [[ ${ZSH_DISABLE_COMPFIX-} = true ]]; then
@@ -161,3 +162,10 @@ SPACESHIP_PROMPT_ASYNC=FALSE
 # fnm
 export PATH="/Users/fabiobaser/Library/Application Support/fnm:$PATH"
 eval "`fnm env`"
+
+# bun completions
+[ -s "/Users/fabiobaser/.bun/_bun" ] && source "/Users/fabiobaser/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

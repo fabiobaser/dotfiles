@@ -28,3 +28,4 @@ meh - 0 : yabai -m window --space 10; yabai -m space --focus 10
 meh - b: yabai -m space --balance
 meh - r: yabai -m space --mirror y-axis
 meh - t: yabai -m window --toggle float
+meh - m: yabai -m window --toggle zoom-fullscreen

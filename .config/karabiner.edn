@@ -137,7 +137,8 @@
                  [:b [:yabai "-m space --balance"]]
                  [:r [:yabai "-m space --mirror y-axis"]]
                  [:v [:vpnPW]]
-                 [:t [:yabai  "-m window --toggle float"]]]}
+                 [:t [:yabai  "-m window --toggle float"]]
+                 [:m [:yabai  "-m window --toggle zoom-fullscreen"]]]}
 
         {:des "Open shortcuts"
          :rules [:o-mode
